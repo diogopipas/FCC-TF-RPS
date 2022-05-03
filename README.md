@@ -41,3 +41,7 @@ The unit tests for this project are in `test_module.py`. We imported the tests f
 
 Copy your project's URL and submit it to freeCodeCamp.
 
+=======
+# Rock Paper Scissors
+
+This is the boilerplate for the Rock Paper Scissors project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/machine-learning-with-python/machine-learning-with-python-projects/rock-paper-scissors
