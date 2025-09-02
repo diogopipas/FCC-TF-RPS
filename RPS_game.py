@@ -44,14 +44,15 @@ def play(player1, player2, num_games, verbose=False):
 
     return (win_rate)
 
-
-def quincy(prev_play, counter=[0]):
+#RRPPS pattern
+def quincy(prev_opponent_play, counter=[0]):
 
     counter[0] += 1
     choices = ["R", "R", "P", "P", "S"]
     return choices[counter[0] % len(choices)]
 
 
+# Plays the move that would beat the opponent's most frequently played move in the last 10 rounds.
 def mrugesh(prev_opponent_play, opponent_history=[]):
     opponent_history.append(prev_opponent_play)
     last_ten = opponent_history[-10:]
@@ -64,13 +65,14 @@ def mrugesh(prev_opponent_play, opponent_history=[]):
     return ideal_response[most_frequent]
 
 
+#Counters your last move
 def kris(prev_opponent_play):
     if prev_opponent_play == '':
         prev_opponent_play = "R"
     ideal_response = {'P': 'S', 'R': 'P', 'S': 'R'}
     return ideal_response[prev_opponent_play]
 
-
+#Predicts based on the sequence of your last two moves
 def abbey(prev_opponent_play,
           opponent_history=[],
           play_order=[{
